@@ -6,15 +6,20 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Lora Semibold Italic';
-  src: url('../fonts/Lora-SemiBoldItalic.woff2') format('woff2'),
-       url('../fonts/Lora-SemiBoldItalic.woff') format('woff'),
-       url('../fonts/Lora-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lora-italic {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: italic;
 }
+
 
 .box {
     opacity: 0;
