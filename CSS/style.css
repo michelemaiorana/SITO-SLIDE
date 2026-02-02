@@ -1,0 +1,313 @@
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('../fonts/Avenir Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora Semibold Italic';
+  src: url('../fonts/Lora-SemiBoldItalic.woff2') format('woff2'),
+       url('../fonts/Lora-SemiBoldItalic.woff') format('woff'),
+       url('../fonts/Lora-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+
+.box {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #FEEFD8;
+    font-family: 'Avenir Book', serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    margin: 0px 40px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+li a {
+    font-size: 20px;
+    color: #313030;
+    text-decoration: none;
+    font-family: 'Lora Semibold Italic', serif;
+    transition: text-decoration 0.2s ease-in-out;
+}
+
+li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.copertina {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copertina img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.copertina::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #1F1E1E99;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.copertina h1 {
+    width: 960px;
+    height: auto;
+    font-family: 'Avenir Book', sans-serif;
+    font-size: 100px;
+    color: #FFFFFF;
+    z-index: 2;
+    line-height: 1.2;
+    text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.copertina h1 .lora {
+    font-family: 'Lora Semibold Italic', serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.pattern {
+    width: 100%;
+    height: 69px;
+    background-image: url('../IMG/pattern.png');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.digitalizzazione, .sostenibilità {
+    display: flex;
+    align-items: stretch;
+    background-color: #FEEFD8;
+    justify-content: center;
+}
+
+.digitalizzazione .testo, .sostenibilità .testo {
+    width: 50%;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.digitalizzazione .testo h1, .sostenibilità .testo h1 {
+    font-family: 'Lora Semibold Italic', serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.digitalizzazione .testo p, .sostenibilità .testo p {
+    font-family: 'Avenir Book', sans-serif;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+.digitalizzazione .testo h1,
+.digitalizzazione .testo p, 
+.sostenibilità .testo h1,
+.sostenibilità .testo p {
+    margin: 0;
+}
+
+
+.digitalizzazione img, .sostenibilità img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+.rifiuti {
+    display: flex;
+    align-items: stretch;
+    background-color: #FEEFD8;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.rifiuti .testo {
+    width: 50%;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rifiuti .testo h1 {
+    font-family: 'Lora Semibold Italic', serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.rifiuti .testo p {
+    font-family: 'Avenir Book', sans-serif;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+.rifiuti .testo h1,
+.rifiuti .testo p {
+    margin: 0;
+}
+
+
+.rifiuti img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+footer {
+    background-color: #E9DBC1;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 50px 0;
+    font-family: 'Avenir Book', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: #313030;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        margin: 0px 20px;
+        justify-content: center;
+    }
+
+    ul {
+        gap: 20px;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    li a {
+        font-size: 18px;
+    }
+
+    .copertina {
+        height: 400px;
+    }
+
+    .copertina h1 {
+        width: 90%;
+        font-size: 48px;
+        padding: 0 20px;
+        text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .pattern {
+        height: 50px;
+    }
+
+    .digitalizzazione, 
+    .sostenibilità, 
+    .rifiuti {
+        flex-direction: column;
+    }
+
+    .digitalizzazione .testo, 
+    .sostenibilità .testo, 
+    .rifiuti .testo {
+        width: 100%;
+        padding: 50px 30px;
+        gap: 15px;
+    }
+
+    .digitalizzazione .testo h1, 
+    .sostenibilità .testo h1, 
+    .rifiuti .testo h1 {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    .digitalizzazione .testo p, 
+    .sostenibilità .testo p, 
+    .rifiuti .testo p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .digitalizzazione img, 
+    .sostenibilità img, 
+    .rifiuti img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    footer p {
+        padding: 35px 20px;
+        font-size: 18px;
+        font-weight: 800;
+        text-align: center;
+    }
+}
+
