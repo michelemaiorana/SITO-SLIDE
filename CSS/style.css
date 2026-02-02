@@ -231,7 +231,7 @@ footer p {
     padding: 50px 0;
     font-family: 'Avenir Book', sans-serif;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 400;
     color: #313030;
 }
 
@@ -306,7 +306,6 @@ footer p {
     footer p {
         padding: 35px 20px;
         font-size: 18px;
-        font-weight: 800;
         text-align: center;
     }
 }
